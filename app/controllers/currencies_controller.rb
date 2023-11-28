@@ -5,7 +5,7 @@ class CurrenciesController < ApplicationController
 
   def convert
     api_key = ENV['CURRENCY_API'] 
-    converter = CurrencyConverterApi.new(api_key)
+    converter = CurrencyConverter.new(api_key)
 
     return if params[:amount].blank?
 
@@ -22,7 +22,7 @@ class CurrenciesController < ApplicationController
 
   def historical_chart
     api_key = ENV['CURRENCY_API']
-    converter = CurrencyConverterApi.new(api_key)
+    converter = CurrencyConverter.new(api_key)
 
     base_currency = params[:base_currency]
     target_currency = params[:target_currency]

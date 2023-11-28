@@ -1,4 +1,4 @@
-class CurrencyConverterApi
+class CurrencyConverter
   include HTTParty
   base_uri 'http://api.currencylayer.com'
 
